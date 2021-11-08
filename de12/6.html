@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>タイヨー第6回　pythonプログラミング2回目</title>
+    <!-- ⑤スタイルシートの設定をしよう -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- h1.htmlからある行をコピペしてくればOK -->
+</head>
+<style>
+    body {background: #c1ab05;}
+  </style>
+<body>
+    <h2>第6回　プログラミング</h2>
+    
+        <ul><li>今回は画像の画質を調べ、平均画質で並び替えるプログラムを作ろうと思った。</li>
+        <li>コード</li>
+        <code>
+            <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+            <li style="background-color:#EFF;">from PIL import Image</li>
+            <li style="background-color:#EEF;">import numpy as np</li>
+            <li style="background-color:#EFF;">import matplotlib.pyplot as plt</li>
+            <li style="background-color:#EEF;">FILE_PATH = 'けん玉.jpg'</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;"># 画像ファイルパスから読み込み</li>
+            <li style="background-color:#EFF;">img = Image.open(FILE_PATH)</li>
+            <li style="background-color:#EEF;">img = img.convert("RGB")</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;"># 画像の表示</li>
+            <li style="background-color:#EFF;">plt.imshow(img)</li>
+            <li style="background-color:#EEF;">plt.show()</li>
+            <li style="background-color:#EFF;"># データの確認</li>
+            <li style="background-color:#EEF;">print("データ：", img)</li>
+            <li style="background-color:#EFF;">img_array = np.asarray(img)</li>
+            <li style="background-color:#EEF;">print("配列：", img_array)</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">#画素数を出す</li>
+            <li style="background-color:#EFF;">print(img_array.shape) #(縦の画素数,横の画素数,RGB)</li>
+            <li style="background-color:#EEF;">#numpy.meanで平均を求める</li>
+            <li style="background-color:#EFF;">import numpy</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">list1 = [img_array.shape]</li>
+            <li style="background-color:#EEF;">print(list1)</li>
+            <li style="background-color:#EFF;">print('・numpy.average()で平均値を求める')</li>
+            <li style="background-color:#EEF;">list1_ave = numpy.mean(list1)</li>
+            <li style="background-color:#EFF;">print('平均値は', list1_ave)</li>
+            </ol></code><br>
+        <li>やっぱりプログラミングは難しい。思っているように動かすコードの組み合わせを<br>
+        探すのが大変だった。このコードでは実際にやりたい動きができなかった。<br>
+        平均の画素もうまく求められなかったし、複数の画像を一気に処理し並び替えることもできなかった。</li><br>
+    <li>参考</li></ul>
+    <div><a href="https://intellectual-curiosity.tokyo/2019/07/02/python%E3%81%A7%E7%94%BB%E5%83%8F%E3%82%92%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80%E6%96%B9%E6%B3%95/"target="_blank">Pythonで画像を読み込む方法-知的好奇心</a><br>
+    <a href="https://flytech.work/blog/21509/"target="_blank">【Python】平均値を求める方法について紹介！-フライテック</a><br>
+    <a href="https://your-3d.com/python-rgb/"target="_blank">Pythonで画像処理　画像配列とRGBを理解しよう！｜-Your 3D</a></div><br>
+ <br>
+ <br>
+         <!-- ④↓に外部リンクを作ってみよう -->
+         <div><a href="index.html"target="_blank">デザイン演習Ⅰ・Ⅱトップページ</a></div><br>
+    </div>
+
+</body>
+</html>
