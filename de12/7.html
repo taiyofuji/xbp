@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>タイヨー第７回　データサイエンス</title>
+    <!-- ⑤スタイルシートの設定をしよう -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- h1.htmlからある行をコピペしてくればOK -->
+</head>
+<style>
+    body {background: #c1ab05;}
+  </style>
+<body>
+    <h2>第7回　データサイエンス</h2>
+    
+        <ul><li>住みやすいエリアをデータから探すということで、データの中にある<br>
+            '名称', 'カテゴリー', 'アドレス', 'アクセス', '路線','駅', 'バス停', '乗換時間', 'バス', <br>
+            '徒歩', '車', '合計時間', '築年数','構造', '階数', '家賃', '管理費', '敷金', '礼金', '間取り', '面積'<br>
+            の21項目の中から合計時間と家賃に注目して分析してみた。<br></li><br>
+        <li>手順としては、平均家賃の低い10の路線と平均合計時間の短い10の路線を調べる。<br> </li>
+         <img src="images/路線別平均家賃の低いトップテン.png" width="45%">
+         <img src="images/路線別平均合計時間の低いトップテン.png" width="45%"><br>
+         その二つのランキングに共通して出て来る路線。湘南新宿ライン高梅と相鉄本線の二路線。<br>
+         二つの路線を比べると、家賃の平均に関してはそこまで変わらないが、合計時間の平均を<br>
+         比べると、湘南新宿ライン高梅のほうが短いため湘南新宿ライン高梅の駅に絞ってみていく。<br>
+         <img src="images/湘南新宿ライン駅別家賃ヒストグラム.png" width="45%"><br>
+         グラフからわかるように、比較的家賃が低く、物件数も多くあることから戸塚駅周辺のエリアを<br>
+         お勧めできると考えられる。<br>
+
+         <li>ソースコード</li></ul>
+         <code>
+            <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+            <li style="background-color:#EFF;">import pandas as pd  # データ分析に用いるライブラリ</li>
+            <li style="background-color:#EEF;">import matplotlib.pyplot as plt  # グラフ表示に用いるライブラリ</li>
+            <li style="background-color:#EFF;">pd.set_option('display.unicode.east_asian_width', True)  # 表示のずれを少し緩和</li>
+            <li style="background-color:#EEF;">plt.rcParams['font.family'] = 'IPAexGothic'  # グラフ表示におけるフォントの指定</li>
+            <li style="background-color:#EFF;">plt.rcParams['font.size']=4  # グラフに表示される文字のサイズ指定</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">data_path = "data.csv"  # データを読み込む</li>
+            <li style="background-color:#EEF;">df_data = pd.read_csv(data_path,  encoding="utf-8-sig")</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">print(df_data.columns)  # 項目一覧</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">print(df_data["家賃"].describe())</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">print(df_data.groupby("路線").mean().loc[:,"家賃"].sort_values()[:10])  # 平均家賃の低い路線トップテンを表示</li>
+            <li style="background-color:#EFF;">df_data.groupby("路線").mean().loc[:,"家賃"].sort_values()[:10].plot.bar(figsize = (10, 8)) # グラフサイズの指定（大きくすると文字が小さくな</li>
+            <li style="background-color:#EEF;">plt.subplots_adjust(left=0.02, right=0.98,bottom=0.3)</li>
+            <li style="background-color:#EFF;">plt.show()</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">print(df_data.groupby("路線").mean().loc[:,"合計時間"].sort_values()[:10])  # 平均合計時間の短い路線トップテンを表示</li>
+            <li style="background-color:#EEF;">df_data.groupby("路線").mean().loc[:,"合計時間"].sort_values()[:10].plot.bar(figsize = (10, 8)) # グラフサイズの指定（大きくすると文字が小さくな</li>
+            <li style="background-color:#EFF;">plt.subplots_adjust(left=0.02, right=0.98,bottom=0.3)</li>
+            <li style="background-color:#EEF;">plt.show()</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">mask = (df_data["路線"] == "湘南新宿ライン高海") # 湘南新宿ライン高梅に路線を限定</li>
+            <li style="background-color:#EFF;">print(df_data[mask])</li>
+            <li style="background-color:#EEF;">axes = df_data[mask].loc[:, "家賃"].hist(by=df_data[mask].loc[:, "駅"])  # 駅と家賃のヒストグラム</li>
+            <li style="background-color:#EFF;">plt.show()</li>
+            <li style="background-color:#EEF;"></li>
+            </ol></code><br>
+        
+       
+        
+ <br>
+ <br>
+         <!-- ④↓に外部リンクを作ってみよう -->
+         <div><a href="index.html"target="_blank">デザイン演習Ⅰ・Ⅱトップページ</a></div><br>
+    </div>
+
+</body>
+</html>
