@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>de34①タイヨー</title>
+    <!-- ⑤スタイルシートの設定をしよう -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- h1.htmlからある行をコピペしてくればOK -->
+</head>
+<style>
+    body {background: #7fffbf;text-align:center;}
+  </style>
+<body>
+   
+    <h1>第1回課題</h1>
+<h3>マイコンボードをはじめてつかってみた<br></h3>
+Arduino UNOを使用した<br>
+Arduinoのプログラミングの文の最後はセミコロン；で終わる<br>
+<img src="images/２.jpg" width="30%"><br>
+接続の際に丸の部分をしっかりと差し込まないとパソコンと上手く接続できず<br>
+シリアルポートを選択することができない
+<ul><h4><li>LEDを光らせる</li></h4>
+LEDの長いほうがプラスで短いほうがマイナス<br>
+今回使用したLEDは５V用の抵抗があるため違うものを使うときは<br>
+抵抗入れる必要があるため注意<br>
+マイナスはGND(グラウンド)に、プラスの方はブレッドボードと同じ数字のところと繋げる<br>
+digitalWrite(13,HIGH);は電源オンで、digitalWrite(13,LOW);は電源オフ<br>
+<img src="images/.jpg" width="30%"><br>
+    <h4><li>明るさセンサー</li></h4>
+    Arduinoの５Vと10Ωの抵抗をつなぎ、センサーのユニットをそれに繋げ、<br>
+    最後にGNDと繋げる。<br>
+    シリアルモニタを使うことによってセンサーの値を見ることができる。
+    <h4><li>センサーを使ってLEDを光らせる</li></ul></h4>
+    明るさの数値が150よりも大きかったら光り、そうでなければ光らないとif文を<br>
+    使用して条件分岐<br>
+    <img src="images/Arduino_センサーのコード .png" width="30%"><br>
+
+    <h1>課題2</h1>
+    正の感情：朝早く起きたとき、授業に余裕をもって到着した時、
+    信号で一回も止まらなかったとき、友達と会ったとき、<br>
+<br>
+    負の感情：単調な授業、課題が溜まってる時、突然の雨<br>
+    <br>
+<a href="index.html"target="_blank">デザイン演習Ⅲ,Ⅳ・トップページ</a><br>
+    </div>
+
+</body>
+</html>
