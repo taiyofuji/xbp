@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>de34③タイヨー</title>
+    <!-- ⑤スタイルシートの設定をしよう -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- h1.htmlからある行をコピペしてくればOK -->
+</head>
+<style>
+    body {background: #7fffbf;text-align:center;}
+  </style>
+<body>
+   
+    <h1>第3回</h1>
+<h3>ステッピングモーターを動かす<br></h3>
+コード  <br>
+<code>
+    <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+    <li style="background-color:#EFF;">const int DIR  = 8;</li>
+    <li style="background-color:#EEF;">const int STEP = 9;</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">void setup() {</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;pinMode(DIR, OUTPUT);</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;pinMode(STEP, OUTPUT);</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;digitalWrite(DIR, LOW);</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;digitalWrite(STEP, LOW);</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;Serial.begin(9600);</li>
+    <li style="background-color:#EEF;">}</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">void loop() {</li>
+    <li style="background-color:#EFF;">int val=0;</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;val=analogRead(1);</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;Serial.println(val);</li>
+    <li style="background-color:#EEF;">if(val&lt;200){</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clockwise(600);</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;}else{</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;counter_clockwise(600);</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;}</li>
+    <li style="background-color:#EFF;">}</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">void clockwise(int delaytime){</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;digitalWrite(DIR, HIGH);//HIGHは時計回り</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;digitalWrite(STEP, HIGH);</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;delayMicroseconds(delaytime);</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;digitalWrite(STEP, LOW);</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;delayMicroseconds(delaytime);</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">}</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">void counter_clockwise(int delaytime){</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;digitalWrite(DIR, LOW);//はLOWは反時計回り</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;digitalWrite(STEP, HIGH);</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;delayMicroseconds(delaytime);</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;digitalWrite(STEP, LOW);</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;delayMicroseconds(delaytime);</li>
+    <li style="background-color:#EEF;">}</li>
+    </ol></code>
+ディレイタイム5000のやつは回るスピード<br>
+    <img src="images/モーターの回路.JPG" width="30%"><br>
+
+    <h1>課題2</h1>
+    <h3>グループワーク<br></h3>
+HMW (How might we)： 私たちがどうしたらいいかを付け加えて考える。<br>
+Yes and...：「...そうそう、それでね...」って感じで肯定し付け加えて新たな展開を生み出す。<br>
+<img src="images/グループ共有HMW1.JPG" width="30%">
+<img src="images/グループ共有HMW2.JPG" width="30%">
+<img src="images/グループ共有HMW3.JPG" width="30%"><br>
+
+    <br>
+<a href="index.html"target="_blank">デザイン演習Ⅲ,Ⅳ・トップページ</a><br>
+    </div>
+
+</body>
+</html>
