@@ -1742,6 +1742,30 @@ input, select, textarea {
 			.button.style3:active {
 				background-color: #1f232b;
 			}
+			input[type="button"].style6,
+		input[type="submit"].style6,
+		input[type="reset"].style6,
+		button.style6,
+		.button.style6 {
+			background: #7870e9 url("images/overlay.png");
+			color: #fff;
+		}
+
+			input[type="button"].style6:hover,
+			input[type="submit"].style6:hover,
+			input[type="reset"].style6:hover,
+			button.style6:hover,
+			.button.style6:hover {
+				background-color: #8092f9;
+			}
+
+			input[type="button"].style6:active,
+			input[type="submit"].style6:active,
+			input[type="reset"].style6:active,
+			button.style6:active,
+			.button.style6:active {
+				background-color: #606ed9;
+			}
 
 /* List */
 
@@ -2061,7 +2085,7 @@ input, select, textarea {
 		justify-content: center;
 		position: relative;
 		height: 24em;
-		background: url("../../images/banner.jpg") center center;
+		background: url("../../images/blue.jpg") center center;
 		background-size: cover;
 		padding: 0;
 	}
@@ -2261,7 +2285,7 @@ input, select, textarea {
 	}
 
 		#highlights .highlight h3 {
-			color: #e97770;
+			color: #0f0e0e;
 			margin: 0 0 0.75em 0;
 			font-size: 1.15em;
 			letter-spacing: 0.05em;

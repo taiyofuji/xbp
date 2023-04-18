@@ -1742,6 +1742,30 @@ input, select, textarea {
 			.button.style3:active {
 				background-color: #1f232b;
 			}
+			input[type="button"].style4,
+		input[type="submit"].style4,
+		input[type="reset"].style4,
+		button.style4,
+		.button.style4 {
+			background: #94f07d url("images/overlay.png");
+			color: #fff;
+		}
+
+			input[type="button"].style4:hover,
+			input[type="submit"].style4:hover,
+			input[type="reset"].style4:hover,
+			button.style4:hover,
+			.button.style4:hover {
+				background-color: #91f367;
+			}
+
+			input[type="button"].style4:active,
+			input[type="submit"].style4:active,
+			input[type="reset"].style4:active,
+			button.style4:active,
+			.button.style4:active {
+				background-color: #86d960;
+			}
 
 /* List */
 
@@ -1850,7 +1874,7 @@ input, select, textarea {
 		}
 
 		.feature-list h3 {
-			color: #e97770 !important;
+			color: #1a1a1a !important;
 			margin: -0.35em 0 0.75em 0;
 			font-size: 1.15em;
 			letter-spacing: 0.05em;
@@ -2002,13 +2026,13 @@ input, select, textarea {
 			}
 
 		.wrapper.style1 {
-			background: #e97770 url("images/overlay.png");
+			background: #111111 url("images/overlay.png");
 			color: #eee;
 			color: rgba(255, 255, 255, 0.75);
 		}
 
 			.wrapper.style1 .title {
-				background: #e97770 url("images/overlay.png");
+				background: #0f0f0f url("images/overlay.png");
 				color: #fff;
 			}
 
@@ -2061,7 +2085,7 @@ input, select, textarea {
 		justify-content: center;
 		position: relative;
 		height: 24em;
-		background: url("../../images/banner.jpg") center center;
+		background: url("../../images/green.jpg") center center;
 		background-size: cover;
 		padding: 0;
 	}
@@ -2261,7 +2285,7 @@ input, select, textarea {
 	}
 
 		#highlights .highlight h3 {
-			color: #e97770;
+			color: #0c0c0c;
 			margin: 0 0 0.75em 0;
 			font-size: 1.15em;
 			letter-spacing: 0.05em;

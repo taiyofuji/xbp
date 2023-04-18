@@ -1742,7 +1742,30 @@ input, select, textarea {
 			.button.style3:active {
 				background-color: #1f232b;
 			}
-
+			input[type="button"].style5,
+			input[type="submit"].style5,
+			input[type="reset"].style5,
+			button.style5,
+			.button.style5 {
+				background: #e570e9 url("images/overlay.png");
+				color: #fff;
+			}
+	
+				input[type="button"].style5:hover,
+				input[type="submit"].style5:hover,
+				input[type="reset"].style5:hover,
+				button.style5:hover,
+				.button.style5:hover {
+					background-color: #e980f9;
+				}
+	
+				input[type="button"].style5:active,
+				input[type="submit"].style5:active,
+				input[type="reset"].style5:active,
+				button.style5:active,
+				.button.style5:active {
+					background-color: #cd60d9;
+				}
 /* List */
 
 	ul {
@@ -2061,7 +2084,7 @@ input, select, textarea {
 		justify-content: center;
 		position: relative;
 		height: 24em;
-		background: url("../../images/banner.jpg") center center;
+		background: url("../../images/purple.jpg") center center;
 		background-size: cover;
 		padding: 0;
 	}
@@ -2261,7 +2284,7 @@ input, select, textarea {
 	}
 
 		#highlights .highlight h3 {
-			color: #e97770;
+			color: #0c0c0c;
 			margin: 0 0 0.75em 0;
 			font-size: 1.15em;
 			letter-spacing: 0.05em;

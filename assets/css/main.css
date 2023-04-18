@@ -2123,13 +2123,13 @@ input, select, textarea {
 			}
 
 		.wrapper.style1 {
-			background: #e97770 url("images/overlay.png");
+			background: #fca751 url("images/overlay.png");
 			color: #eee;
 			color: rgba(255, 255, 255, 0.75);
 		}
 
 			.wrapper.style1 .title {
-				background: #e97770 url("images/overlay.png");
+				background: #a8a4a4 url("images/overlay.png");
 				color: #fff;
 			}
 
@@ -2182,7 +2182,7 @@ input, select, textarea {
 		justify-content: center;
 		position: relative;
 		height: 24em;
-		background: url("../../images/banner.jpg") center center;
+		background: url("../../images/sunrise.jpg") center center;
 		background-size: cover;
 		padding: 0;
 	}
@@ -2242,7 +2242,7 @@ input, select, textarea {
 		#nav > ul {
 			display: inline-block;
 			border-radius: 0.35em;
-			box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
+			box-shadow: inset 0px 0px 1px 1px rgb(255, 255, 255);
 			padding: 0 1.5em 0 1.5em;
 		}
 
@@ -2258,7 +2258,7 @@ input, select, textarea {
 
 				#nav > ul > li > a, #nav > ul > li > span {
 					display: block;
-					color: #eee;
+					color: #000000;
 					color: rgba(255, 255, 255, 0.75);
 					text-transform: uppercase;
 					text-decoration: none;
@@ -2283,7 +2283,7 @@ input, select, textarea {
 				}
 
 	.dropotron {
-		background: #222835 url("images/overlay.png");
+		background: #eff0f3 url("images/overlay.png");
 		background-color: rgba(44, 50, 63, 0.925);
 		padding: 1.25em 1em 1.25em 1em;
 		border-radius: 0.35em;
@@ -2382,7 +2382,7 @@ input, select, textarea {
 	}
 
 		#highlights .highlight h3 {
-			color: #e97770;
+			color: #313030;
 			margin: 0 0 0.75em 0;
 			font-size: 1.15em;
 			letter-spacing: 0.05em;
@@ -2762,13 +2762,13 @@ input, select, textarea {
 						height: 38px;
 						line-height: 38px;
 						text-align: center;
-						color: rgba(255, 255, 255, 0.75);
-						background-color: rgba(92, 95, 103, 0.5);
+						color: rgba(243, 242, 242, 0.75);
+						background-color: rgba(233, 233, 236, 0.5);
 						border-radius: 0.25em;
 					}
 
 					#titleBar .toggle:active:before {
-						background-color: rgba(92, 95, 103, 0.75);
+						background-color: rgba(236, 237, 242, 0.75);
 					}
 
 			#navPanel {
@@ -2793,7 +2793,7 @@ input, select, textarea {
 				width: 275px;
 				z-index: 10002;
 				background: #242730 url("images/overlay.png");
-				box-shadow: inset -3px 0px 4px 0px rgba(0, 0, 0, 0.1);
+				box-shadow: inset -3px 0px 4px 0px rgba(255, 255, 255, 0.938);
 			}
 
 				#navPanel .link {
@@ -2806,7 +2806,7 @@ input, select, textarea {
 					text-decoration: none;
 					height: 44px;
 					line-height: 44px;
-					border-top: solid 1px rgba(255, 255, 255, 0.05);
+					border-top: solid 1px rgba(255, 255, 255, 0.858);
 					margin: 0 15px 0 15px;
 				}
 
