@@ -1742,6 +1742,127 @@ input, select, textarea {
 			.button.style3:active {
 				background-color: #1f232b;
 			}
+			input[type="button"].style4,
+		input[type="submit"].style4,
+		input[type="reset"].style4,
+		button.style4,
+		.button.style4 {
+			background: #94f07d url("images/overlay.png");
+			color: #fff;
+		}
+
+			input[type="button"].style4:hover,
+			input[type="submit"].style4:hover,
+			input[type="reset"].style4:hover,
+			button.style4:hover,
+			.button.style4:hover {
+				background-color: #91f367;
+			}
+
+			input[type="button"].style4:active,
+			input[type="submit"].style4:active,
+			input[type="reset"].style4:active,
+			button.style4:active,
+			.button.style4:active {
+				background-color: #86d960;
+			}
+			input[type="button"].style5,
+		input[type="submit"].style5,
+		input[type="reset"].style5,
+		button.style5,
+		.button.style5 {
+			background: #e570e9 url("images/overlay.png");
+			color: #fff;
+		}
+
+			input[type="button"].style5:hover,
+			input[type="submit"].style5:hover,
+			input[type="reset"].style5:hover,
+			button.style5:hover,
+			.button.style5:hover {
+				background-color: #e980f9;
+			}
+
+			input[type="button"].style5:active,
+			input[type="submit"].style5:active,
+			input[type="reset"].style5:active,
+			button.style5:active,
+			.button.style5:active {
+				background-color: #cd60d9;
+			}
+			input[type="button"].style6,
+		input[type="submit"].style6,
+		input[type="reset"].style6,
+		button.style6,
+		.button.style6 {
+			background: #7870e9 url("images/overlay.png");
+			color: #fff;
+		}
+
+			input[type="button"].style6:hover,
+			input[type="submit"].style6:hover,
+			input[type="reset"].style6:hover,
+			button.style6:hover,
+			.button.style6:hover {
+				background-color: #8092f9;
+			}
+
+			input[type="button"].style6:active,
+			input[type="submit"].style6:active,
+			input[type="reset"].style6:active,
+			button.style6:active,
+			.button.style6:active {
+				background-color: #606ed9;
+			}
+			input[type="button"].style7,
+		input[type="submit"].style7,
+		input[type="reset"].style7,
+		button.style7,
+		.button.style7 {
+			background: #a6a19d url("images/overlay.png");
+			color: #fff;
+		}
+
+			input[type="button"].style7:hover,
+			input[type="submit"].style7:hover,
+			input[type="reset"].style7:hover,
+			button.style7:hover,
+			.button.style7:hover {
+				background-color: #7e7a79;
+			}
+
+			input[type="button"].style7:active,
+			input[type="submit"].style7:active,
+			input[type="reset"].style7:active,
+			button.style7:active,
+			.button.style7:active {
+				background-color: #575555;
+			}
+			input[type="button"].style8,
+		input[type="submit"].style8,
+		input[type="reset"].style8,
+		button.style8,
+		.button.style8 {
+			background: #e9e970 url("images/overlay.png");
+			color: #fff;
+		}
+
+			input[type="button"].style8:hover,
+			input[type="submit"].style8:hover,
+			input[type="reset"].style8:hover,
+			button.style8:hover,
+			.button.style8:hover {
+				background-color: #f9f980;
+			}
+
+			input[type="button"].style8:active,
+			input[type="submit"].style8:active,
+			input[type="reset"].style8:active,
+			button.style8:active,
+			.button.style8:active {
+				background-color: #d9cf60;
+			}
+			
 
 /* List */
 
