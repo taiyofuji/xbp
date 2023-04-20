@@ -2125,11 +2125,11 @@ input, select, textarea {
 		.wrapper.style1 {
 			background: #fca751 url("images/overlay.png");
 			color: #eee;
-			color: rgba(255, 255, 255, 0.75);
+			color: #fca751(201, 135, 135, 0.75);
 		}
 
 			.wrapper.style1 .title {
-				background: #a8a4a4 url("images/overlay.png");
+				background: #fca751 url("images/overlay.png");
 				color: #fff;
 			}
 
