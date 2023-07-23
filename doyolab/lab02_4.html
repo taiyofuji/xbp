@@ -191,72 +191,77 @@
 											<br>
 											<h4>内側の基盤の作成</h4>
 											ボタンを押すと、LEDが光り、その光ったデータを受け取ったデバイス（パソコンやスマホ）の画面上にご飯がいるorいらないの表示をしたい！（一週間分）<br>
-											<img src="images/カレンダーの表示のやつ.jpg" width="30%"><br>
+											<img src="images/kal1_image.jpg" width="30%"><br>
 											<br>
 											まずはスイッチを押すとLEDが光る回路を作る。<br>
 											5Vとスイッチの片方を繋げる。スイッチのもう片方と受信する番号のポートとLEDの＋を繋げる。そしてLEDの－を基盤のGNDとつなげる。<br>
-											<img src="images/カレンダーの光るの一個のやつ.jpg" width="30%"><br>
+											<img src="images/kal2_hitotu.jpg" width="20%"><br>
 											<br>
 											次にそれを一週間分の七つ作成する。<br>
 											ラボにあるLEDを使用した。するとボルト数が合っていなかったようで発熱し焦げた。<br>
-											<img src="images/こげたやつ.jpg" width="30%"><br>
+											<img src="images/kal3_koge.jpg" width="20%"><br>
 											<br>
-											七つのLEDと七つのスイッチを上記の回路のように組み立てる。そしてはんだ付けをし、まとめる。<br>
-											<img src="images/nanatu.jpg" width="30%"><br>
+											七つのLEDと七つのスイッチを上記の回路のように組み立てる。<br>
+											<img src="images/kal4_nana.jpg" width="30%">
+											<img src="images/kal5_nana.jpg" width="30%"><br>
+											<br>
+											そしてはんだ付けをし、まとめる。<br>
+											<img src="images/kal6_handa.jpg" width="20%">
+											<img src="images/kal7_matome.jpg" width="20%"><br>
 											<br>
 											ポート番号を七つ選ぶ（使えるやつと使えないやつがあるため）<br>
 											[12][13][14][21][22][27][32]<br>
 											七つのボックスをつくり、LEDが光ったらデータを0から1にするプログラミングを入れる。<br>
-											<img src="images/コード画面.jpg" width="30%"><br>
-											全コード↓
-											#include <dfLink.h>
-												#include <WiFi.h>
-												//使用環境に応じて変更-----------------------------------------------------
-												const char* ssid     = "FabLabMinatoMirai-AirMac";//繋げたいネットワーク
-												const char* password = "fablab_minatomirai";//繋げたいネットワークのパスワード
-												String pkey = "fYoeFAjRw68mfMBLOsXY";//端末ID
-												//-------------------------------------------------------------------
-												//dfLinkインスタンス化-->conn1とよぶ
-												dfLink conn1(pkey);
-												void setup() {
-												  // put your setup code here, to run once:
-													Serial.begin(74880);//esp32は74880
-													WiFi.begin(ssid, password);
-													Serial.println("WiFi connecting");
-													while ((!(WiFi.status() == WL_CONNECTED))){
-													  delay(300);
-													  Serial.print(".");
-													}
-													pinMode(14, INPUT);
-													pinMode(32, INPUT);
-													Serial.println("OK");
-												}
-												void loop() {
-												  //必要に応じて変更-->センサーなどから値を取得（例では直接変数に代入）-------
-												  int idata=0;
-												  float fdata=1.5;
-												  String tdata="test";
-												  int val[7] = {0,0,0,0,0,0,0};
-												  val[0] = digitalRead(14);
-												  val[1] = digitalRead(32);
-												  val[2] = digitalRead(22);
-												  val[3] = digitalRead(12);
-												  val[4] = digitalRead(21);
-												  val[5] = digitalRead(27);
-												  val[6] = digitalRead(13);
-												  Serial.println(String(val[0])+String(val[1])+String(val[2])+String(val[3])+String(val[4])+String(val[5])+String(val[6]));
-												  //-----------------------------
-												  //引数はintデータ、floatデータ、テキストデータの順番
-												  //intデータ、floatデータはStringに変換する
-												  String ret=conn1.send_data("","",String(val[0])+String(val[1])+String(val[2])+String(val[3])+String(val[4])+String(val[5])+String(val[6]));
-												  //必要なデータだけ送信したい場合は下記のように、不要なデータは""と空にする
-												  //String ret=conn1.send_data("",String(fdata),"");
-												  //String ret=conn1.send_data(String(idata),"",tdata);
-												  Serial.println(ret);
-												  delay(1000);
-												}
-												
+											<img src="images/kal8_deta.png" width="50%"><br>
+											全コード↓<br>
+											#include <dfLink.h><br>
+												#include <WiFi.h><br>
+												//使用環境に応じて変更-----------------------------------------------------<br>
+												const char* ssid     = "";//繋げたいネットワーク<br>
+												const char* password = "";//繋げたいネットワークのパスワード<br>
+												String pkey = "";//端末ID<br>
+												//-------------------------------------------------------------------<br>
+												//dfLinkインスタンス化-->conn1とよぶ<br>
+												dfLink conn1(pkey);<br>
+												void setup() {<br>
+												  // put your setup code here, to run once:<br>
+													Serial.begin(74880);//esp32は74880<br>
+													WiFi.begin(ssid, password);<br>
+													Serial.println("WiFi connecting");<br>
+													while ((!(WiFi.status() == WL_CONNECTED))){<br>
+													  delay(300);<br>
+													  Serial.print(".");<br>
+													}<br>
+													pinMode(14, INPUT);<br>
+													pinMode(32, INPUT);<br>
+													Serial.println("OK");<br>
+												}<br>
+												void loop() {<br>
+												  //必要に応じて変更-->センサーなどから値を取得（例では直接変数に代入）-------<br>
+												  int idata=0;<br>
+												  float fdata=1.5;<br>
+												  String tdata="test";<br>
+												  int val[7] = {0,0,0,0,0,0,0};<br>
+												  val[0] = digitalRead(14);<br>
+												  val[1] = digitalRead(32);<br>
+												  val[2] = digitalRead(22);<br>
+												  val[3] = digitalRead(12);<br>
+												  val[4] = digitalRead(21);<br>
+												  val[5] = digitalRead(27);<br>
+												  val[6] = digitalRead(13);<br>
+												  Serial.println(String(val[0])+String(val[1])+String(val[2])+String(val[3])+String(val[4])+String(val[5])+String(val[6]));<br>
+												  //-----------------------------<br>
+												  //引数はintデータ、floatデータ、テキストデータの順番<br>
+												  //intデータ、floatデータはStringに変換する<br>
+												  String ret=conn1.send_data("","",String(val[0])+String(val[1])+String(val[2])+String(val[3])+String(val[4])+String(val[5])+String(val[6]));<br>
+												  //必要なデータだけ送信したい場合は下記のように、不要なデータは""と空にする<br>
+												  //String ret=conn1.send_data("",String(fdata),"");<br>
+												  //String ret=conn1.send_data(String(idata),"",tdata);<br>
+												  Serial.println(ret);<br>
+												  delay(1000);<br>
+												}<br>
 											<br>
+											実際動かしてみようと思ったが、使用したいネットワークを入れなおしていないため、保留中。
 
 
                                         <br>
